@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Kikouedi Dandou Messi</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#bts">BTS SIO</a></li>
+            <li><a href="#profil">Mon Profil</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#veille">Veille Techno</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="accueil">
+        <div class="vertical-stripe"></div>
+
+        <div class="hero-content">
+            <div class="stars">★ ★ ★</div>
+            <h1>Kikouedi Dandou<br>Messi</h1>
+            <p class="subtitle">Bienvenue sur mon portfolio</p>
+            
+            <div class="hero-image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Walking_tiger_female.jpg/640px-Walking_tiger_female.jpg" alt="Portrait" class="hero-image">
+            </div>
+
+            <div class="hero-buttons">
+                <a href="Images/cv.pdf" download class="btn">Mon CV</a>
+                <a href="Images/tableaumessi.pdf" download class="btn">Tableau de Synthèse</a>
+            </div>
+    </header>
+
+    <section id="bts">
+        <div class="container">
+            <h2 class="section-title">Le BTS SIO</h2>
+            <div class="title-underline"></div>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+                 Le <strong>BTS Services Informatiques aux Organisations</strong> est un diplôme d'État de niveau Bac+2. 
+                Il forme des professionnels capables de répondre aux besoins informatiques des entreprises, que ce soit en matière d'infrastructure réseau ou de développement logiciel.
+            </p>
+            
+            <div class="options-grid">
+                <div class="option-card slam-card">
+                    <h3>Option SLAM</h3>
+                    <p class="option-sub">Solutions Logicielles et Applications Métiers</p>
+                    <p>Cette option forme des spécialistes des logiciels (rédaction d’un cahier des charges, formulation des besoins et spécifications, développement, intégration au sein de la société).</p>
+                </div>
+                <div class="option-card">
+                    <h3>Option SISR</h3>
+                    <p class="option-sub">Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                    <p>Cette option forme des experts en administration des systèmes et des réseaux. 
+                        Elle se concentre sur l'installation, la configuration et la maintenance des équipements informatiques (serveurs, routeurs, switchs) ainsi que sur la sécurité des infrastructures et la gestion des accès utilisateurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profil">
+        
+        <div class="parcours-container">
+            <h2 class="section-title">Mon Parcours Scolaire</h2>
+            <div class="title-underline"></div>
+
+            <div class="timeline">
+                <div class="timeline-item right">
+                    <div class="timeline-date">2018 - 2021</div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>CSNDR, Pointe-Noire, République du Congo</h3>
+                        <p class="diploma">Bac Général</p>
+                        <p class="description">Options Mathématiques, Physique-Chimie et SVT.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-date">2021 - 2024</div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Université d'Orléans, Orléans, France</h3>
+                        <p class="diploma">2e année de Licence Informatique</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-date">2024 - 2026</div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Lycée Charles de Foucauld, Paris, France</h3>
+                        <p class="diploma">BTS SIO</p>
+                        <p class="description">Option Solutions logicielles et applications métiers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-section">
+            <h3 class="subsection-title">Compétences Développement</h3>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" onclick="scrollCarousel('skills', -1)">&#10094;</button>
+                <div class="carousel-track" id="skills-track">
+                    <div class="carousel-card"><img src="Images/icons8-html-5-128.svg" alt="HTML"><p>HTML</p></div>
+                    <div class="carousel-card"><img src="Images/icons8-css3.svg" alt="CSS"><p>CSS</p></div>
+                    <div class="carousel-card"><img src="Images/icons8-javascript.svg" alt="JS"><p>JavaScript</p></div>
+                    <div class="carousel-card"><img src="Images/Laravel.svg" alt="Laravel"><p>Laravel</p></div>
+                    <div class="carousel-card"><img src="Images/phplogo.svg" alt="PHP"><p>PHP</p></div>
+                    <div class="carousel-card"><img src="Images/icons8-logo-de-mysql.svg"><p>MySQL</p></div>
+                    <div class="carousel-card"><img src="Images/icons8-logo-java-coffee-cup.svg" alt="Java"><p>Java</p></div>
+                    <div class="carousel-card"><img src="Images/icons8-python.svg" alt="Python"><p>Python</p></div>
+                </div>
+                <button class="carousel-btn next-btn" onclick="scrollCarousel('skills', 1)">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="carousel-section dark-bg">
+            <h3 class="subsection-title text-white">Mes Outils</h3>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn white-arrow" onclick="scrollCarousel('tools', -1)">&#10094;</button>
+                <div class="carousel-track" id="tools-track">
+                    <div class="carousel-card"><img src="Images/icons8-code-studio-visuel-2019.svg" alt="VS Code"><p>VS Code</p></div>
+                    <div class="carousel-card"><img src="Images/vmware-7.svg" alt="VMware"><p>VMware</p></div>
+                    <div class="carousel-card"><img src="Images/icons8-github.svg" alt="GitHub"><p>GitHub</p></div>
+                    <div class="carousel-card"><img src="Images/FileZilla.svg" alt="FileZilla"><p>FileZilla</p></div>
+                    <div class="carousel-card"><img src="Images/Linux.svg" alt="Linux"><p>Linux</p></div>
+                    <div class="carousel-card"><img src="Images/IntelliJ IDEA.svg" alt="IntelliJ"><p>IntelliJ</p></div>
+                    <div class="carousel-card"><img src="Images/Trello.svg" alt="Trello"><p>Trello</p></div>
+                </div>
+                <button class="carousel-btn next-btn white-arrow" onclick="scrollCarousel('tools', 1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="realisations">
+        <div class="container">
+            <h2 class="section-title">Mes Réalisations</h2>
+            <div class="title-underline"></div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-target="modal-1">
+                    
+                    <div class="card-content">
+                        <span class="project-tag">Projet</span>
+                        <h3>Application de facturation — M2L</h3>
+                        <p>Application de facturation (Bootstrap, PDO, MySQL) — saisie mensuelle, gestion des ligues, prestations et factures.</p>
+                        <button class="btn-details">Voir détails +</button>
+                    </div>
+                </div>
+
+                
+                <!-- Projet ajouté : Gestion des employés (Java) -->
+                <div class="project-card" data-target="modal-employes">
+                     
+                    <div class="card-content">
+                        <span class="project-tag">Projet</span>
+                        <h3>Gestion des employés — M2L (Java)</h3>
+                        <p>Application Java : conversion CLI → multi-utilisateurs, 3 niveaux d'habilitation, persistance via BD.</p>
+                        <button class="btn-details">Voir détails +</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="veille">
+        <div class="container">
+            <h2 class="section-title">Veille Technologique</h2>
+            
+            
+            <div><h3>Qu'est ce qu'une veille technologique ?</h3>
+                <p>La veille technologique est un processus de surveillance des évolutions et des innovations dans un domaine précis. Elle permet de recueillir, analyser et exploiter des informations sur les nouvelles technologies 
+                    afin d’anticiper les changements, innover, rester compétitif et saisir des opportunités. </p>
+            </div>
+            <div>
+                <h3>Le sujet de ma veille technologique</h3>
+                <p>
+                    Le thème que j’ai choisi pour ma veille est : « L'évolution du Machine Learning : des algorithmes 
+                    prédictifs à l'intelligence artificielle générative ». <br>
+                    Ce sujet m’intéresse particulièrement car je souhaite orienter ma poursuite d’études vers les métiers de la Data et de l’Intelligence Artificielle. En tant qu'étudiant en développement (SLAM), il est crucial pour moi de comprendre comment nous passons d'une programmation classique, basée sur des règles strictes, à une approche où la machine apprend par elle-même grâce aux données.
+                </p>
+            </div>
+            <div>
+                <h3>Evolution de l'IA</h3>
+                <p>
+                    <img src="Images/evoia.webp" alt="Frise de l'évolution de l'IA">
+                </p>
+            </div>
+            <div>
+                <h3>Machine learning vs Programmation traditionnelle</h3>
+                <p>
+                    <img src="Images/tradvsml.png" alt="Comparaison entre programmation traditionnelle et machine learning">
+                </p>
+            </div>
+            <div>
+                <h3>Les articles en lien avec ma veille</h3>
+                <ul>
+                    <li><a href="https://www.ibm.com/fr-fr/think/insights/we-must-check-for-racial-bias-in-our-machine-learning-models">Nous devons vérifier la présence de biais raciaux dans nos modèles de machine learning</a></li>
+                    <li><a href="https://www.ens.psl.eu/actualites/machine-learning-scientific-discovery-l-ens-ouvre-un-cours-d-ia-pour-tous-ses-eleves">Machine Learning for Scientific Discovery: L'ENS ouvre un cours d'IA pour tous ses élèves</a></li>
+                    <li><a href="https://formation.lefebvre-dalloz.fr/actualite/lintelligence-artificielle-dans-lassurance-quelles-typologies-de-nouveaux-risques-notamment-juridiques-vont-emerger">L'intelligence artificielle dans l'assurance : quelles typologies de nouveaux risques, notamment juridiques, vont émerger ?</a></li>
+                    <li><a href="https://www.lapresse.ca/dialogue/opinions/2025-12-12/l-ia-generative-est-une-dystopie-antidemocratique.php">L'IA générative est une dystopie antidémocratique</a></li>
+                    <li><a href="https://www.nicematin.com/societe/vous-allez-devenir-dependants-a-l-utiliser-tout-le-temps-comment-l-intelligence-artificielle-impacte-l-ecole-10660884">« Vous allez devenir dépendants à l’utiliser tout le temps » : comment l’intelligence artificielle impacte l’école dans les Alpes-Maritimes</a></li>
+                    <li><a href="https://blogs.mediapart.fr/olivier-c-marchand/blog/151225/lia-generative-comme-produit-de-la-societe-de-consommation">L'IA générative comme produit de la société de consommation</a></li>
+                </ul>
+                </div>
+            </div>
+             
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <div class="title-underline"></div>
+            <div class="carousel-section dark-bg">
+                
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn prev-btn white-arrow" onclick="scrollCarousel('contact', -1)">&#10094;</button>
+                    <div class="carousel-track" id="contact-track">
+                        <div class="carousel-card"><a href="tel:0784861007"><img src="Images/telephone-receiver-material-svgrepo-com.svg" alt="numéro de téléphone"><p>07 84 86 10 07</p></a></div>
+                        <div class="carousel-card"><a href="https://outlook.live.com/mail/0/deeplink/compose?to=messidandou1@outlook.fr"><img src="Images/ms-outlook-svgrepo-com.svg" alt="Outlook"><p>Outlook</p></a></div>
+                        <div class="carousel-card"><a href="https://github.com/Scorpionfurax"><img src="Images/icons8-github.svg" alt="GitHub"><p>GitHub</p></a></div>
+                        <div class="carousel-card"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=messidandou1@gmail.com"><img src="Images/gmail-svgrepo-com.svg" alt="GMail"><p>GMail</p></a></div>
+                        <div class="carousel-card"><a href="https://www.linkedin.com/in/messi-kikouedi-dandou"><img src="Images/linkedin-svgrepo-com.svg" alt="Linkedin"><p>Linkedin</p></a></div>
+                    </div>
+                    <button class="carousel-btn next-btn white-arrow" onclick="scrollCarousel('contact', 1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Application de facturation — M2L</h2>
+            
+            <p class="modal-content-p"><strong>Objectif :</strong> Concevoir une application de facturation permettant au comptable de saisir mensuellement les facturations par ligue, générer et imprimer des factures, et rechercher des factures par critères.</p>
+            <p class="modal-content-p"><strong>Fonctionnalités :</strong></p>
+            
+            <ul>
+                <li>Menu <strong>Ligue</strong> : création, modification, suppression.</li>
+                <li>Menu <strong>Prestation</strong> : création, modification, suppression.</li>
+                <li>Menu <strong>Facture</strong> : saisie guidée d'une nouvelle facture, impression (PDF/print), recherche par date/ligue/numéro/montant.</li>
+            </ul>
+            
+            
+            <p class="modal-content-p"><strong>Contraintes techniques :</strong> interface responsive réalisée avec <em>Bootstrap</em>, persistance sur MySQL via la classe <strong>PDO</strong> (requêtes préparées, gestion des exceptions), code commenté et versionné via Git.</p>
+            
+        </div>
+    </div>
+
+    
+
+    <div id="modal-employes" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Gestion des employés — M2L (Java)</h2>
+            <p class="modal-content-p"><strong>Contexte :</strong> Application fournie en Java, mono‑utilisateur et en ligne de commande.</p>
+            <p class="modal-content-p"><strong>Objectif :</strong> Rendre l'application multi-utilisateurs via une base de données tout en conservant l'architecture 3-tiers.</p>
+            <p class="modal-content-p"><strong>Habilitations :</strong></p>
+            <ul>
+                <li><strong>Employé</strong> : consultation/annuaire (lecture seule).</li>
+                <li><strong>Admin de ligue</strong> : gestion CRUD des employés de sa ligue via application bureau.</li>
+                <li><strong>Super-admin</strong> : gestion globale et administration des comptes d'admin via CLI.</li>
+            </ul>
+            <p class="modal-content-p"><strong>Contraintes techniques :</strong> conserver l'architecture 3‑tiers, adapter la configuration Eclipse si nécessaire, sécuriser les accès en écriture et intégrer la base de données. Projet réalisé en Java.</p>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

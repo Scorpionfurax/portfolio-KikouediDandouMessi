@@ -1,0 +1,499 @@
+/* =========================================
+   1. RESET & BASES
+   ========================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: linear-gradient(135deg, #f4f4f4 0%, #e8f4fd 100%);
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    animation: fadeInBody 1s ease-out;
+}
+
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* =========================================
+   2. NAVIGATION (STICKY)
+   ========================================= */
+nav {
+    position: fixed; top: 0; width: 100%;
+    display: flex; justify-content: center;
+    padding: 20px 0; z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+nav.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+
+nav ul { list-style: none; display: flex; gap: 40px; }
+
+nav a {
+    text-decoration: none; color: #333;
+    font-size: 0.85rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px;
+    position: relative;
+}
+
+nav a::after {
+    content: ''; position: absolute; width: 0; height: 2px;
+    bottom: -5px; left: 0; background-color: #6df7c1;
+    transition: width 0.3s;
+}
+nav a:hover::after { width: 100%; }
+
+/* =========================================
+   3. HEADER (STYLE MAGAZINE)
+   ========================================= */
+header {
+    position: relative; height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; overflow: hidden;
+    background: linear-gradient(135deg, #f4f4f4 0%, #e8f4fd 100%);
+}
+
+.vertical-stripe {
+    position: absolute; top: 0; bottom: 0; left: 50%;
+    transform: translateX(-50%); width: 120px;
+    background: linear-gradient(180deg, #6df7c1, #2954cc);
+    z-index: 0; opacity: 0.9;
+    animation: pulseStripe 3s ease-in-out infinite;
+}
+
+@keyframes pulseStripe {
+    0%, 100% { opacity: 0.9; transform: translateX(-50%) scaleY(1); }
+    50% { opacity: 1; transform: translateX(-50%) scaleY(1.05); }
+}
+
+.hero-content { z-index: 1; position: relative; margin-top: 60px; animation: fadeInHero 2s ease-out; }
+
+@keyframes fadeInHero {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stars { font-size: 1.2rem; margin-bottom: 15px; letter-spacing: 5px; }
+
+h1 {
+    font-family: 'Playfair Display', serif; font-size: 3.5rem;
+    font-weight: 700; text-transform: uppercase; margin-bottom: 10px;
+}
+
+.subtitle {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 1.5rem; color: #555; margin-bottom: 40px;
+}
+
+.hero-image-container {
+    width: 600px; max-width: 90%; margin: 0 auto;
+    position: relative; z-index: 2;
+}
+
+.hero-image {
+    width: 100%; display: block;
+    filter: sepia(1) hue-rotate(190deg) saturate(3) contrast(0.9);
+    mix-blend-mode: multiply;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #6df7c1, #5ae0a8);
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(109, 247, 193, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #5ae0a8, #4ac894);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(109, 247, 193, 0.4);
+}
+
+/* =========================================
+   4. TITRES DE SECTIONS
+   ========================================= */
+section { padding: 80px 0; animation: fadeInUp 1s ease-out; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+    text-align: center; font-family: 'Playfair Display', serif;
+    font-size: 2rem; color: #333; margin-bottom: 10px;
+}
+
+.title-underline {
+    width: 50px; height: 4px; background: linear-gradient(90deg, #6df7c1, #2954cc);
+    margin: 0 auto 50px; border-radius: 2px;
+}
+
+/* =========================================
+   5. SECTION BTS SIO
+   ========================================= */
+#bts { background-color: #f9fbfd; }
+
+.options-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.option-card {
+    background: white; padding: 30px; border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee;
+}
+
+.slam-card { border-top: 4px solid #6df7c1; transform: scale(1.05); }
+
+.option-card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 10px; }
+.option-sub { font-weight: bold; color: #888; font-size: 0.9rem; margin-bottom: 15px; text-transform: uppercase; }
+
+/* =========================================
+   6. SECTION VEILLE TECHNOLOGIQUE
+   ========================================= */
+#veille { background-color: #f9fbfd; }
+
+#veille .container > div {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#veille .container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+#veille h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#veille p {
+    line-height: 1.6;
+    color: #555;
+}
+
+#veille img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+#veille ul {
+    list-style: none;
+    padding: 0;
+}
+
+#veille li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#veille li:hover {
+    background: #e9ecef;
+}
+
+#veille a {
+    color: #2954cc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#veille a:hover {
+    color: #6df7c1;
+    text-decoration: underline;
+}
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin: 15px;
+    color: #333;
+}
+
+.card p {
+    margin: 0 15px 10px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.card a {
+    display: inline-block;
+    margin: 15px;
+    color: #2954cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card .meta {
+    margin: 15px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* =========================================
+   6. SECTION VEILLE TECHNOLOGIQUE
+   ========================================= */
+#veille { background-color: #f9fbfd; }
+
+#veille .container > div {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+#veille h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#veille p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* =========================================
+   6. SECTION PROFIL (TIMELINE + CAROUSEL)
+   ========================================= */
+#profil { background-color: white; overflow: hidden; }
+
+/* --- TIMELINE EXACTE --- */
+.timeline { position: relative; max-width: 900px; margin: 0 auto; }
+
+/* Ligne centrale */
+.timeline::before {
+    content: ''; position: absolute; top: 0; bottom: 0;
+    left: 50%; width: 2px; background-color: #2954cc;
+    transform: translateX(-50%);
+}
+
+.timeline-item { position: relative; margin-bottom: 60px; width: 50%; }
+
+/* Droite/Gauche */
+.timeline-item.right { left: 50%; padding-left: 50px; text-align: left; }
+.timeline-item.left { left: 0; padding-right: 50px; text-align: right; }
+
+/* Marqueur rond */
+.timeline-marker {
+    position: absolute; top: 20px; width: 14px; height: 14px;
+    border-radius: 50%; background-color: white;
+    border: 3px solid #2954cc; z-index: 1;
+}
+.timeline-item.right .timeline-marker { left: -9px; }
+.timeline-item.left .timeline-marker { right: -9px; }
+
+/* Dates */
+.timeline-date {
+    position: absolute; top: 22px; color: #2954cc;
+    font-weight: 700; font-size: 1.1rem; width: 150px;
+}
+.timeline-item.right .timeline-date { left: -180px; text-align: right; }
+.timeline-item.left .timeline-date { right: -180px; text-align: left; }
+
+/* Contenu */
+.timeline-content {
+    background-color: white; padding: 30px; border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08); position: relative;
+}
+
+/* Flèche triangle */
+.timeline-content::after {
+    content: ''; position: absolute; top: 25px; width: 0; height: 0; border-style: solid;
+}
+.timeline-item.right .timeline-content::after {
+    left: -10px; border-width: 10px 10px 10px 0; border-color: transparent white transparent transparent;
+}
+.timeline-item.left .timeline-content::after {
+    right: -10px; border-width: 10px 0 10px 10px; border-color: transparent transparent transparent white;
+}
+
+.timeline-content h3 { margin: 0 0 10px; font-size: 1.2rem; font-weight: 700; }
+.diploma { color: #666; margin-bottom: 10px; font-style: italic; }
+.school-link {
+    display: inline-block; padding: 10px 20px; background-color: #2954cc;
+    color: white; text-decoration: none; border-radius: 2px; font-size: 0.9rem;
+}
+.school-link:hover { background-color: #1a3a9c; }
+
+
+/* --- CAROUSELS (MANUELS) --- */
+.carousel-section { padding: 50px 0; text-align: center; }
+.carousel-section.dark-bg { background-color: #222; margin: 0 -20px; padding: 60px 0; }
+
+.subsection-title { font-size: 1.8rem; margin-bottom: 40px; color: #333; }
+.text-white { color: white; }
+
+.carousel-wrapper {
+    display: flex; align-items: center; justify-content: center;
+    max-width: 1000px; margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex; overflow-x: auto; scroll-behavior: smooth;
+    gap: 30px; padding: 20px; width: 80%; scrollbar-width: none;
+    animation: scroll infinite;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+
+.carousel-card {
+    flex: 0 0 120px; display: flex; flex-direction: column;
+    align-items: center; padding: 10px;
+}
+
+.carousel-card img { width: 80px; height: 80px; margin-bottom: 15px; transition: all 0.3s ease; border-radius: 50%; }
+.carousel-card:hover img { transform: scale(1.1) rotate(5deg); filter: brightness(1.1); }
+.carousel-card p { font-weight: 700; margin: 0; color: #333; }
+.dark-bg .carousel-card p { color: #ccc; }
+
+.carousel-card a { text-decoration: none; color: inherit; display: block; }
+
+.carousel-btn {
+    background: none; border: none; font-size: 3rem; color: #2954cc;
+    cursor: pointer; padding: 0 20px; user-select: none;
+}
+.white-arrow { color: #888; }
+.white-arrow:hover { color: white; }
+
+/* =========================================
+   7. RÉALISATIONS (GRILLE)
+   ========================================= */
+#realisations { background-color: #f9fbfd; }
+
+.projects-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: white; border-radius: 8px; overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease; cursor: pointer;
+}
+.project-card:hover { 
+    transform: translateY(-10px) scale(1.02); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.card-image img { width: 100%; height: 200px; object-fit: cover; }
+.card-content { padding: 25px; }
+.project-tag { color: #6df7c1; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; }
+.btn-details { background: none; border: none; border-bottom: 2px solid #6df7c1; cursor: pointer; font-weight: 700; }
+
+/* MODALES */
+.modal {
+    display: none; position: fixed; z-index: 2000; left: 0; top: 0;
+    width: 100%; height: 100%; background-color: rgba(0,0,0,0.8);
+}
+.modal.active { display: block; }
+.modal-content {
+    background-color: #fff; margin: 10% auto; padding: 40px;
+    border-radius: 8px; width: 80%; max-width: 600px; position: relative;
+}
+/* Projects carousel specific adjustments */
+.projects-carousel .carousel-track { width: 100%; }
+.projects-carousel .project-card { flex: 0 0 320px; display: flex; flex-direction: column; }
+.projects-carousel .project-card .card-image { height: 180px; }
+.projects-carousel .project-card .card-image img { width: 100%; height: 100%; object-fit: cover; }
+.projects-carousel .project-card .card-content { padding: 20px; }
+.close-modal { position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; }
+
+/* =========================================
+   8. RESPONSIVE MOBILE
+   ========================================= */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    .vertical-stripe { width: 60px; }
+    nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; font-size: 0.8rem; }
+    
+    /* Timeline Mobile */
+    .timeline::before { left: 20px; }
+    .timeline-item { width: 100%; padding-left: 60px; padding-right: 0; }
+    .timeline-item.right, .timeline-item.left { left: 0; text-align: left; }
+    .timeline-marker { left: 11px !important; right: auto !important; }
+    .timeline-date { position: static; text-align: left !important; display: block; width: 100%; margin-bottom: 10px; }
+    .timeline-content::after {
+        left: -10px !important; right: auto !important;
+        border-width: 10px 10px 10px 0 !important;
+        border-color: transparent white transparent transparent !important;
+    }
+
+    /* Carousel Mobile */
+    .carousel-btn { display: none; }
+    .carousel-track { width: 100%; }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.modal-content-p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 1;
+}
