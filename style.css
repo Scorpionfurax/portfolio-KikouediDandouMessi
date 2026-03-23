@@ -444,6 +444,56 @@ section { padding: 80px 0; animation: fadeInUp 1s ease-out; }
 .project-tag { color: #6df7c1; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; }
 .btn-details { background: none; border: none; border-bottom: 2px solid #6df7c1; cursor: pointer; font-weight: 700; }
 
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.link-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #6df7c1;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.link-btn:hover {
+    background-color: #5ae0a8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(109, 247, 193, 0.3);
+}
+
+.document-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
 /* MODALES */
 .modal {
     display: none; position: fixed; z-index: 2000; left: 0; top: 0;
@@ -451,8 +501,9 @@ section { padding: 80px 0; animation: fadeInUp 1s ease-out; }
 }
 .modal.active { display: block; }
 .modal-content {
-    background-color: #fff; margin: 10% auto; padding: 40px;
+    background-color: #fff; margin: 5% auto; padding: 40px;
     border-radius: 8px; width: 80%; max-width: 600px; position: relative;
+    max-height: 90vh; overflow-y: auto;
 }
 /* Projects carousel specific adjustments */
 .projects-carousel .carousel-track { width: 100%; }
