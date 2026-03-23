@@ -45,3 +45,19 @@ function scrollCarousel(type, direction) {
         });
     }
 }
+
+// 4. GESTION DU DROPDOWN DOCUMENTS
+const dropdownBtn = document.querySelector('.dropdown-btn');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+if (dropdownBtn && dropdownContent) {
+    dropdownBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownContent.classList.toggle('show');
+    });
+
+    // Fermer le dropdown si on clique ailleurs
+    document.addEventListener('click', () => {
+        dropdownContent.classList.remove('show');
+    });
+}
